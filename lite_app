@@ -1,0 +1,36 @@
+use Mojolicious::Lite;
+use UUID::Tiny ':std';
+
+my $couchdb = "http://db.xlxcd1.kit.cm:5984/rtc";
+
+get '/' => 'index';
+
+post '/app' => sub {
+  my $self = shift;
+  my ($uuid, $major, $minor) = ($self->param('uuid'), $self->param('major'), $self->param('minor'));
+  my $last = $self->session->{"$uuid-$major-$minor"};
+  my $this = $self->session->{"$uuid-$major-$minor"} = {
+    signal => $self->param('signal'),
+    proximity => proximity($self->param('signal')),
+    status => $self->param('status') || '',
+    hidden => $self->param('hidden'),
+    tracker => $last->{tracker} || uuid_to_string(create_uuid(UUID_V4)),
+  };
+  $self->render_later;
+  #warn "$couchdb/$uuid-$major-$minor";
+  $self->ua->get("$couchdb/$uuid-$major-$minor" => sub {
+    my ($ua, $tx) = @_;
+    my $beacon = $tx->res->json || {};
+    $self->render(json => $beacon);
+  });
+};
+
+app->start;
+
+sub proximity {
+  my $signal = shift;
+  return 3 if $signal > 66;
+  return 2 if $signal > 33;
+  return 1 if $signal > 0;
+  return 0;
+}

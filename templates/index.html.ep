@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Reading the City</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="/css/normalize.css" type="text/css" media="screen"/>
+        <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen"/>
+        <link rel="stylesheet" href="/css/slider.css">
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+        <script src="/js/checkbox.js"></script>
+    </head>
+    <body>
+        <div id="Wrapper">
+            <div id="Header">
+                <div id="Account">
+                    <h2>Welcome, Caleb Albers.</h2>
+                </div>
+            </div><!-- End Header -->
+            <div id="Output">
+                <div id="logo">
+                    <img src="/img/logo.png" class="resize" alt="Logo Goes Here."/>
+                </div>
+                <div id="ConsoleWrapper">
+                    <h1>Console Output:</h1>
+                    <div id="console">
+                        <p>> iBeacon M:1222 m:4245 found - level 66 - Close</p>
+                        <p>> iBeacon M:0205 m:1352 found - level 65 - Close</p>
+                        <p>> iBeacon M:2452 m:0012 found - level 43 - Close</p>
+                        <p>> iBeacon M:1222 m:4245 found - level 90 - Next</p>
+                        <p>> User Action: hide iBeacon M:1222 m:4245</p>
+                        <p>> iBeacon M:2452 m:0012 found - level 22 - Far</p>
+                        <p>> _</p>
+                           <!-- INSERT CONSOLE JAVASCRIPT HERE! -->
+                    </div>
+                </div>
+                <div id="clear"></div>
+            </div><!-- End Output -->
+            <div id="Input">
+                <div class="Slider"><!-- Start Slider 2 -->
+                     <div class="FloatLeft">
+                        <span>65</span>
+                     </div>
+                     <div class="FloatRight">
+                         <p>iBeacon</p>
+                         <p>Major ID: 0205<br/>Minor ID: 1352</p>
+                         <p>Signal Strength: 65 db</p>
+                         <p>Status: Approaching<br/>Hidden: NO</p>
+                         <div class="checkbox">
+                            <input type="checkbox" value="0">
+                         </div>
+                     </div>
+                </div><!-- End Slider 1 -->
+                <div class="Slider"><!-- Start Slider 2 -->
+                     <div class="FloatLeft">
+                        <span>90</span>
+                     </div>
+                     <div class="FloatRight"  style="color: #999999;">
+                         <p>iBeacon</p>
+                         <p>Major ID: 1222<br/>Minor ID: 4245</p>
+                         <p>Signal Strength: 90 db</p>
+                         <p>Status: Approaching<br/>Hidden: YES</p>
+                         <div class="checkbox">
+                            <input type="checkbox" value="0" checked>
+                         </div>
+                     </div>
+                </div><!-- End Slider 2 -->
+                <div class="Slider"><!-- Start Slider 3 -->
+                     <div class="FloatLeft">
+                         <span>0</span>
+                     </div>
+                     <div class="FloatRight">
+                         <p>iBeacon</p>
+                         <p>Major ID: 1352<br/>Minor ID: 0003</p>
+                         <p>Signal Strength: 0 db</p>
+                         <p>Status: N/A<br/>Hidden: NO</p>
+                         <div class="checkbox">
+                            <input type="checkbox" value="0">
+                         </div>
+                     </div>
+                </div><!-- End Slider 3 -->
+                <div class="Slider"><!-- Start Slider 4 -->
+                     <div class="FloatLeft">
+                         <span>22</span>
+                     </div>
+                     <div class="FloatRight">
+                         <p>iBeacon</p>
+                         <p>Major ID: 2452<br/>Minor ID: 0012</p>
+                         <p>Signal Strength: 22 db</p>
+                         <p>Status: Departing<br/>Hidden: NO</p>
+                         <div class="checkbox" id="basic">
+                            <input type="checkbox" value="0">
+                         </div>
+                     </div>
+                </div><!-- End Slider 4 -->
+            </div><!-- End Input -->
+        </div><!-- End Wrapper -->
+    </body>
+</html>
