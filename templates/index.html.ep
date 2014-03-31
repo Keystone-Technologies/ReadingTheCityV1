@@ -15,6 +15,38 @@ and open the template in the editor.
         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
         <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
         <script src="/js/checkbox.js"></script>
+        <style>
+             .hide { color:gray }
+        </style>
+        <script>
+            $(function(){
+                $(".checkbox").each(function(){
+                    $(this).change(function(){
+                        console.log("Check val: "+$(this).is(':checked'));
+                        $(this).parent().parent().toggleClass("hide");
+                    });
+                });
+                $(".Slider > .FloatLeft > span").each(function(){
+                    var beacon = $(this).attr('id');
+                    console.log("Setting up slider " + beacon);
+                    var value = parseInt( $( this ).text(), 10 );
+                    $(this).empty().slider({
+                        value: value,
+                        range: "min",
+                        animate: true,
+                        orientation: "vertical",
+                        stop: function (e, ui) {
+                            if ( $(this).parent().parent().find("input[type=checkbox]").first().is(':checked') == false ) {
+                                $.post("/app", {signal: ui.value, beacon: beacon}, function(data){
+                                    console.log(data);
+                                    $("#console").append("<p>> <a href='" + data.url.default + "'>" + data.name + " - " + data.proximity + "</a></p>");
+                                });
+                            }
+                        }
+                    });
+                });
+            });
+        </script>
     </head>
     <body>
         <div id="Wrapper">
@@ -43,13 +75,13 @@ and open the template in the editor.
                 <div id="clear"></div>
             </div><!-- End Output -->
             <div id="Input">
-                <div class="Slider"><!-- Start Slider 2 -->
+                <div class="Slider"><!-- Start Slider 1 -->
                      <div class="FloatLeft">
-                        <span>65</span>
+                        <span id="b9407f30-f5f8-466e-aff9-25556b57fe6d-30024-36068">65</span>
                      </div>
                      <div class="FloatRight">
                          <p>iBeacon</p>
-                         <p>Major ID: 0205<br/>Minor ID: 1352</p>
+                         <p>Major ID: 30024<br/>Minor ID: 36068</p>
                          <p>Signal Strength: 65 db</p>
                          <p>Status: Approaching<br/>Hidden: NO</p>
                          <div class="checkbox">
@@ -59,21 +91,21 @@ and open the template in the editor.
                 </div><!-- End Slider 1 -->
                 <div class="Slider"><!-- Start Slider 2 -->
                      <div class="FloatLeft">
-                        <span>90</span>
+                        <span id="B9407F30-F5F8-466E-AFF9-25556B57FE6D-1222-4245">90</span>
                      </div>
-                     <div class="FloatRight"  style="color: #999999;">
+                     <div class="FloatRight">
                          <p>iBeacon</p>
                          <p>Major ID: 1222<br/>Minor ID: 4245</p>
                          <p>Signal Strength: 90 db</p>
-                         <p>Status: Approaching<br/>Hidden: YES</p>
+                         <p>Status: Approaching<br/>Hidden: NO</p>
                          <div class="checkbox">
-                            <input type="checkbox" value="0" checked>
+                            <input type="checkbox" value="0">
                          </div>
                      </div>
                 </div><!-- End Slider 2 -->
                 <div class="Slider"><!-- Start Slider 3 -->
                      <div class="FloatLeft">
-                         <span>0</span>
+                         <span id="B9407F30-F5F8-466E-AFF9-25556B57FE6D-1352-0003">0</span>
                      </div>
                      <div class="FloatRight">
                          <p>iBeacon</p>
@@ -87,7 +119,7 @@ and open the template in the editor.
                 </div><!-- End Slider 3 -->
                 <div class="Slider"><!-- Start Slider 4 -->
                      <div class="FloatLeft">
-                         <span>22</span>
+                         <span id="B9407F30-F5F8-466E-AFF9-25556B57FE6D-2452-0012">22</span>
                      </div>
                      <div class="FloatRight">
                          <p>iBeacon</p>

@@ -7,13 +7,14 @@ get '/' => 'index';
 
 post '/app' => sub {
   my $self = shift;
-  my ($uuid, $major, $minor) = ($self->param('uuid'), $self->param('major'), $self->param('minor'));
+  my $beacon = $self->param('beacon');
+  my ($uuid, $major, $minor) = ($beacon =~ /^(.*?)-(\d{4,5})-(\d{4,5})$/);
   my $last = $self->session->{"$uuid-$major-$minor"};
   my $this = $self->session->{"$uuid-$major-$minor"} = {
     signal => $self->param('signal'),
     proximity => proximity($self->param('signal')),
-    status => $self->param('status') || '',
-    hidden => $self->param('hidden'),
+    #status => $self->param('status') || '',
+    #hidden => $self->param('hidden'),
     tracker => $last->{tracker} || uuid_to_string(create_uuid(UUID_V4)),
   };
   $self->render_later;
@@ -21,6 +22,8 @@ post '/app' => sub {
   $self->ua->get("$couchdb/$uuid-$major-$minor" => sub {
     my ($ua, $tx) = @_;
     my $beacon = $tx->res->json || {};
+    $beacon->{url} = $beacon->{url}->{$this->{proximity}};
+    $beacon->{proximity} = $this->{proximity};
     $self->render(json => $beacon);
   });
 };
@@ -29,8 +32,8 @@ app->start;
 
 sub proximity {
   my $signal = shift;
-  return 3 if $signal > 66;
-  return 2 if $signal > 33;
-  return 1 if $signal > 0;
-  return 0;
+  return 'visiting' if $signal > 66;
+  return 'near' if $signal > 33;
+  return 'far' if $signal > 0;
+  return 'oor';
 }

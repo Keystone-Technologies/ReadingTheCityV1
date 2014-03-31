@@ -40,7 +40,7 @@
 //Start JS Slider & Checkbox
 
 
-
+/*
 $( ".FloatRight" ).click(function(){
   $(this).toggleClass("hide");
 });
@@ -48,10 +48,11 @@ $( ".FloatRight" ).click(function(){
 $.post("/rtc", {beacon: 1234, signal: 12}, function(data){
   $( "#console" ).append(data.beacon[0].name + ":" + data.beacon[0].signal);
 });
-
+*/
 
 $(function() {
 
+/*
 $( ".FloatLeft > span" ).each(function() {
   // read initial values from markup and remove that
   var value = parseInt( $( this ).text(), 10 );
@@ -62,7 +63,8 @@ $( ".FloatLeft > span" ).each(function() {
     orientation: "vertical"
   });
 });
-$('.checkbox input').switchButton(); //checkbox code
+*/
+    $('.checkbox input').switchButton(); //checkbox code
 });
 
 //Start Checkbox Code
