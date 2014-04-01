@@ -9,12 +9,12 @@ and open the template in the editor.
         <title>Reading the City</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="/css/normalize.css" type="text/css" media="screen"/>
-        <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen"/>
-        <link rel="stylesheet" href="/css/slider.css">
+        <link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen"/>
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+        <link rel="stylesheet" href="css/slider.css">
         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
         <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-        <script src="/js/checkbox.js"></script>
+        <script src="js/checkbox.js"></script>
         <style>
              .hide { color:gray }
         </style>
@@ -57,7 +57,7 @@ and open the template in the editor.
             </div><!-- End Header -->
             <div id="Output">
                 <div id="logo">
-                    <img src="/img/logo.png" class="resize" alt="Logo Goes Here."/>
+                    <img src="img/logo.png" class="resize" alt="Logo Goes Here."/>
                 </div>
                 <div id="ConsoleWrapper">
                     <h1>Console Output:</h1>
