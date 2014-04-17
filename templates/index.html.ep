@@ -1,9 +1,4 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <title>Reading the City</title>
@@ -52,41 +47,32 @@ and open the template in the editor.
         <div id="Wrapper">
             <div id="Header">
                 <div id="Account">
-                    <h2>Welcome, Caleb Albers.</h2>
+                    <h2><span></span></h2>
                 </div>
             </div><!-- End Header -->
-            <div id="Output">
+            <!--<div id="Output">
                 <div id="logo">
                     <img src="img/logo.png" class="resize" alt="Logo Goes Here."/>
                 </div>
                 <div id="ConsoleWrapper">
                     <h1>Console Output:</h1>
-                    <div id="console">
-                        <p>> iBeacon M:1222 m:4245 found - level 66 - Close</p>
-                        <p>> iBeacon M:0205 m:1352 found - level 65 - Close</p>
-                        <p>> iBeacon M:2452 m:0012 found - level 43 - Close</p>
-                        <p>> iBeacon M:1222 m:4245 found - level 90 - Next</p>
-                        <p>> User Action: hide iBeacon M:1222 m:4245</p>
-                        <p>> iBeacon M:2452 m:0012 found - level 22 - Far</p>
-                        <p>> _</p>
-                           <!-- INSERT CONSOLE JAVASCRIPT HERE! -->
+                    <div id="console"><p>&#62;&nsbp;Major:<span class="console.major"></span>&nsbp;Minor:<span class="console.minor"></span>&nsbp;&#45;&nsbp;Signal Strength:<span class="console.signal"></span>
                     </div>
                 </div>
                 <div id="clear"></div>
-            </div><!-- End Output -->
+            </div><!-- End Output -->-->
             <div id="Input">
                 <div class="Slider"><!-- Start Slider 1 -->
                      <div class="FloatLeft">
                         <span id="b9407f30-f5f8-466e-aff9-25556b57fe6d-30024-36068">65</span>
                      </div>
                      <div class="FloatRight">
-                         <p>iBeacon</p>
-                         <p>Major ID: 30024<br/>Minor ID: 36068</p>
-                         <p>Signal Strength: 65 db</p>
-                         <p>Status: Approaching<br/>Hidden: NO</p>
-                         <div class="checkbox">
-                            <input type="checkbox" value="0">
-                         </div>
+                         <p><span class="name"></span></p>
+                         <p>Major ID:&nsbp;<span class="major"></span><br/>Minor ID:&nsbp;<span class="minor"></span></p>
+                         <p>Signal Strength:&nsbp;<span class="signal"></span>&nsbp;db</p>
+                         <p>Link:&nsbp;<span class="url"></span></p>
+                         <p>Status:&nsbp;<span class="status"></span><br/>Proximity:&nsbp;<span class="proximity"></span><br/>Hidden:&nsbp;<span class="hidden"></span></p>
+                         <div class="checkbox"><input type="checkbox" value="0"></div>
                      </div>
                 </div><!-- End Slider 1 -->
                 <div class="Slider"><!-- Start Slider 2 -->
@@ -94,13 +80,12 @@ and open the template in the editor.
                         <span id="B9407F30-F5F8-466E-AFF9-25556B57FE6D-1222-4245">90</span>
                      </div>
                      <div class="FloatRight">
-                         <p>iBeacon</p>
-                         <p>Major ID: 1222<br/>Minor ID: 4245</p>
-                         <p>Signal Strength: 90 db</p>
-                         <p>Status: Approaching<br/>Hidden: NO</p>
-                         <div class="checkbox">
-                            <input type="checkbox" value="0">
-                         </div>
+                         <p><span class="name"></span></p>
+                         <p>Major ID:&nsbp;<span class="major"></span><br/>Minor ID:&nsbp;<span class="minor"></span></p>
+                         <p>Signal Strength:&nsbp;<span class="signal"></span>&nsbp;db</p>
+                         <p>Link:&nsbp;<span class="url"></span></p>
+                         <p>Status:&nsbp;<span class="status"></span><br/>Proximity:&nsbp;<span class="proximity"></span><br/>Hidden:&nsbp;<span class="hidden"></span></p>
+                         <div class="checkbox"><input type="checkbox" value="0"></div>
                      </div>
                 </div><!-- End Slider 2 -->
                 <div class="Slider"><!-- Start Slider 3 -->
@@ -108,13 +93,12 @@ and open the template in the editor.
                          <span id="B9407F30-F5F8-466E-AFF9-25556B57FE6D-1352-0003">0</span>
                      </div>
                      <div class="FloatRight">
-                         <p>iBeacon</p>
-                         <p>Major ID: 1352<br/>Minor ID: 0003</p>
-                         <p>Signal Strength: 0 db</p>
-                         <p>Status: N/A<br/>Hidden: NO</p>
-                         <div class="checkbox">
-                            <input type="checkbox" value="0">
-                         </div>
+                         <p><span class="name"></span></p>
+                         <p>Major ID:&nsbp;<span class="major"></span><br/>Minor ID:&nsbp;<span class="minor"></span></p>
+                         <p>Signal Strength:&nsbp;<span class="signal"></span>&nsbp;db</p>
+                         <p>Link:&nsbp;<span class="url"></span></p>
+                         <p>Status:&nsbp;<span class="status"></span><br/>Proximity:&nsbp;<span class="proximity"></span><br/>Hidden:&nsbp;<span class="hidden"></span></p>
+                         <div class="checkbox"><input type="checkbox" value="0"></div>
                      </div>
                 </div><!-- End Slider 3 -->
                 <div class="Slider"><!-- Start Slider 4 -->
@@ -122,13 +106,12 @@ and open the template in the editor.
                          <span id="B9407F30-F5F8-466E-AFF9-25556B57FE6D-2452-0012">22</span>
                      </div>
                      <div class="FloatRight">
-                         <p>iBeacon</p>
-                         <p>Major ID: 2452<br/>Minor ID: 0012</p>
-                         <p>Signal Strength: 22 db</p>
-                         <p>Status: Departing<br/>Hidden: NO</p>
-                         <div class="checkbox" id="basic">
-                            <input type="checkbox" value="0">
-                         </div>
+                         <p><span class="name"></span></p>
+                         <p>Major ID:&nsbp;<span class="major"></span><br/>Minor ID:&nsbp;<span class="minor"></span></p>
+                         <p>Signal Strength:&nsbp;<span class="signal"></span>&nsbp;db</p>
+                         <p>Link:&nsbp;<span class="url"></span></p>
+                         <p>Status:&nsbp;<span class="status"></span><br/>Proximity:&nsbp;<span class="proximity"></span><br/>Hidden:&nsbp;<span class="hidden"></span></p>
+                         <div class="checkbox"><input type="checkbox" value="0"></div>
                      </div>
                 </div><!-- End Slider 4 -->
             </div><!-- End Input -->
