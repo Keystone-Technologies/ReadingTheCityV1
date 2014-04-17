@@ -13,8 +13,8 @@ post '/app' => sub {
   my $this = $self->session->{"$uuid-$major-$minor"} = {
     signal => $self->param('signal'),
     proximity => proximity($self->param('signal')),
-    #status => $self->param('status') || '',
-    #hidden => $self->param('hidden'),
+    status => status($self->param('signal'), $last->{signal}),
+    hidden => $self->param('hidden') // $last->{hidden},
     tracker => $last->{tracker} || uuid_to_string(create_uuid(UUID_V4)),
   };
   $self->render_later;
@@ -24,11 +24,23 @@ post '/app' => sub {
     my $beacon = $tx->res->json || {};
     $beacon->{url} = $beacon->{url}->{$this->{proximity}};
     $beacon->{proximity} = $this->{proximity};
+    $beacon->{major} = $major;
+    $beacon->{minor} = $minor;
+    $beacon->{signal} = $this->{signal};
+    $beacon->{status} = $this->{status};
+    $beacon->{hidden} = $this->{hidden};
     $self->render(json => $beacon);
   });
 };
 
 app->start;
+
+sub status {
+  my ($this, $last) = @_;
+  return 'arriving' if $this > $last;
+  return 'departing' if $this < $last;
+  return 'still';
+}
 
 sub proximity {
   my $signal = shift;
