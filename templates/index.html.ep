@@ -78,7 +78,7 @@
                     </div>
                 </div>
                 <div id="clear"></div>
-            </div><!-- End Output -->-->
+            </div> -->
             <div id="Input">
                 <div class="Slider"><!-- Start Slider 1 -->
                      <div class="FloatLeft">
@@ -86,10 +86,10 @@
                      </div>
                      <div class="FloatRight">
                          <p><span class="name"></span></p>
-                         <p>Major ID:&nbsp;<span class="major"></span><br/>Minor ID:&nbsp;<span class="minor"></span></p>
-                         <p>Signal Strength:&nbsp;<span class="signal"></span>&nbsp;db</p>
-                         <p>Link:&nbsp;<span class="url"></span></p>
-                         <p>Status:&nbsp;<span class="status"></span><br/>Proximity:&nbsp;<span class="proximity"></span><br/>Hidden:&nbsp;<span class="hidden"></span></p>
+                         <p>Major ID: <span class="major"></span><br/>Minor ID: <span class="minor"></span></p>
+                         <p>Signal Strength: <span class="signal"></span> db</p>
+                         <p>Link: <span class="url"></span></p>
+                         <p>Status: <span class="status"></span><br/>Proximity: <span class="proximity"></span><br/>Hidden: <span class="hidden"></span></p>
                          <div class="checkbox"><input type="checkbox" value="0"></div>
                      </div>
                 </div><!-- End Slider 1 -->
@@ -99,10 +99,10 @@
                      </div>
                      <div class="FloatRight">
                          <p><span class="name"></span></p>
-                         <p>Major ID:&nbsp;<span class="major"></span><br/>Minor ID:&nbsp;<span class="minor"></span></p>
-                         <p>Signal Strength:&nbsp;<span class="signal"></span>&nbsp;db</p>
-                         <p>Link:&nbsp;<span class="url"></span></p>
-                         <p>Status:&nbsp;<span class="status"></span><br/>Proximity:&nbsp;<span class="proximity"></span><br/>Hidden:&nbsp;<span class="hidden"></span></p>
+                         <p>Major ID: <span class="major"></span><br/>Minor ID: <span class="minor"></span></p>
+                         <p>Signal Strength: <span class="signal"></span> db</p>
+                         <p>Link: <span class="url"></span></p>
+                         <p>Status: <span class="status"></span><br/>Proximity: <span class="proximity"></span><br/>Hidden: <span class="hidden"></span></p>
                          <div class="checkbox"><input type="checkbox" value="0"></div>
                      </div>
                 </div><!-- End Slider 2 -->
@@ -112,10 +112,10 @@
                      </div>
                      <div class="FloatRight">
                          <p><span class="name"></span></p>
-                         <p>Major ID:&nbsp;<span class="major"></span><br/>Minor ID:&nbsp;<span class="minor"></span></p>
-                         <p>Signal Strength:&nbsp;<span class="signal"></span>&nbsp;db</p>
-                         <p>Link:&nbsp;<span class="url"></span></p>
-                         <p>Status:&nbsp;<span class="status"></span><br/>Proximity:&nbsp;<span class="proximity"></span><br/>Hidden:&nbsp;<span class="hidden"></span></p>
+                         <p>Major ID: <span class="major"></span><br/>Minor ID: <span class="minor"></span></p>
+                         <p>Signal Strength: <span class="signal"></span> db</p>
+                         <p>Link: <span class="url"></span></p>
+                         <p>Status: <span class="status"></span><br/>Proximity: <span class="proximity"></span><br/>Hidden: <span class="hidden"></span></p>
                          <div class="checkbox"><input type="checkbox" value="0"></div>
                      </div>
                 </div><!-- End Slider 3 -->
@@ -125,10 +125,10 @@
                      </div>
                      <div class="FloatRight">
                          <p><span class="name"></span></p>
-                         <p>Major ID:&nbsp;<span class="major"></span><br/>Minor ID:&nbsp;<span class="minor"></span></p>
-                         <p>Signal Strength:&nbsp;<span class="signal"></span>&nbsp;db</p>
-                         <p>Link:&nbsp;<span class="url"></span></p>
-                         <p>Status:&nbsp;<span class="status"></span><br/>Proximity:&nbsp;<span class="proximity"></span><br/>Hidden:&nbsp;<span class="hidden"></span></p>
+                         <p>Major ID: <span class="major"></span><br/>Minor ID: <span class="minor"></span></p>
+                         <p>Signal Strength: <span class="signal"></span> db</p>
+                         <p>Link: <span class="url"></span></p>
+                         <p>Status: <span class="status"></span><br/>Proximity: <span class="proximity"></span><br/>Hidden: <span class="hidden"></span></p>
                          <div class="checkbox"><input type="checkbox" value="0"></div>
                      </div>
                 </div><!-- End Slider 4 -->
