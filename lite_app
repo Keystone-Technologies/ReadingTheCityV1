@@ -4,6 +4,7 @@ use UUID::Tiny ':std';
 my $couchdb = "http://db.xlxcd1.kit.cm:5984/rtc";
 
 get '/' => 'index';
+get '/help';
 
 post '/app' => sub {
   my $self = shift;
